@@ -1,5 +1,10 @@
+#Version Python 3.6.6
+#matplotlib required
+#Author : Runnlion
+
 import numpy as np
 import matplotlib.pyplot as plt
+
 def CoordinationFunction(a,b,c,d,e,f,g,h):
     t = round((g-c)/((a-c-e+g)),3)
     s = round((h-f)/(b+h-f-d),3)
@@ -49,9 +54,11 @@ def CoordinationFunction(a,b,c,d,e,f,g,h):
     plt.plot(s1,t1)
     plt.plot(s2,t2)
     plt.scatter(x,y)
+    print("Nash equilibrium:")
     for a, b in zip(x, y):  
-        plt.text(a, b, (round(a,2),round(b,2)),ha='center', va='bottom', fontsize=10)  
+        plt.text(a, b, (round(a,2),round(b,2)),ha='center', va='bottom', fontsize=10)
+        print("{{",round(a,3),",",round((1-a),3),"},","{",round(b,3),",",round((1-b),3),"}}")
     plt.show()
     
 #Specific For Coordination Game
-CoordinationFunction(1,2,0,0,0,0,2,1)
+CoordinationFunction(0,0,-1,4,4,-1,-2,-2)
