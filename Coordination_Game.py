@@ -31,10 +31,12 @@ def CoordinationFunction(a,b,c,d,e,f,g,h):
             t2.append(1)
         else:
             t2.append(0)
+    #Find 
     for num in range(0,10001):
-        if((s1[num]==s2[num])&(t1[num]==t2[num])):
-            x.append(s1[num])
-            y.append(t1[num])
+        print("Curve 1 :({},{}) Curve 2 :({},{})".format(s1[num],s2[num],t1[10000-num],t2[10000-num]))
+        if((s1[num]==t1[10000-num])&(s2[num]==t2[10000-num])):
+            x.append(t1[num])
+            y.append(s1[num])
     for num in range(0,10001):
         try:
             if(abs(s1[num]-s1[num+1])==1):
