@@ -33,7 +33,7 @@ def CoordinationFunction(a,b,c,d,e,f,g,h):
             t2.append(0)
     #Find 
     for num in range(0,10001):
-        print("Curve 1 :({},{}) Curve 2 :({},{})".format(s1[num],s2[num],t1[10000-num],t2[10000-num]))
+        #print("Curve 1 :({},{}) Curve 2 :({},{})".format(s1[num],s2[num],t1[10000-num],t2[10000-num]))
         if((s1[num]==t1[10000-num])&(s2[num]==t2[10000-num])):
             x.append(t1[num])
             y.append(s1[num])
